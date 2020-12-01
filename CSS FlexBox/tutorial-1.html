@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox tutorial 1</title>
+</head>
+<body>
+    <h1>Flexboc tutorial 1.</h1><br/>
+
+    <style>
+        .main {
+            display: flex;
+            background: lightseagreen;
+            /* align-items: flex-start; */
+            /* align-items: flex-start; */
+            /* align-items: center; */
+            /* align-items: stretch; */
+            /* align-items: baseline; */
+            /* flex-direction: column;  */
+
+
+        }
+
+        .main > div {
+            background-color: lightgreen;
+            border: 1px solid green;
+            padding: 10px;
+        }
+
+        .child1 {
+            flex: 2;
+            /* margin: 10px; */
+            order: 2;
+
+        }
+
+        .child2 {
+            flex:1;
+            order: 1;
+
+        }
+
+        .child3 {
+            flex:3;
+            order: 3 ;
+
+        }
+
+        .child4 {
+
+        }
+
+
+
+
+    </style>
+
+    <div class="main">
+        <div class="child1">
+            <h2 class="box1">Box 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="child2">
+            <h2 class="box2">Box 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="child3">
+            <h2 class="box3">Box 3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+    </div>
+
+    
+
+
+
+</body>
+</html>

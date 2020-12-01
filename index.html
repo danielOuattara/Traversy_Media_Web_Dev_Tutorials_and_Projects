@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Learning JavaScript</title>
+		<link rel="stylesheet" href="style.css" />
+	
+	</head>
+	
+<body>
+	<div class="header">
+			<h1>Learning JavaScript</h1>
+			<p>With Daniel OUATTARA</p>
+	</div>
+
+	<div class="container">	
+		<button onclick= "doClick()">Click Me</button>
+		<button onclick= "this.innerHTML = 'You Clicked !' ">Click Me</button>
+		<button onclick= "changeText(this) = You Clicked !">Click Me</button>
+	</div> 
+
+
+	<script>
+	
+	// variables
+			let number1= '45';
+			var number2= '30';
+			// alert('My favorite number is ' +number2);
+			
+		// camel case
+			let myFavoriteNumber;
+			
+		// partial case
+			let MyFavoriteNumber;
+			
+			// undersocre style 
+		    let my_favorite_number;
+			var my_Favorite_Number;
+			
+		// arrays
+		
+			var colors = [ ' red', ' blue', ' green'];
+		//	alert(colors);
+		//	alert(colors[1]);	
+			var colors2 = new Array('red','yellow','orange'); 
+		//	alert(colors2[2]);
+			colors2[3] = 'green';
+		//	alert(colors2);
+			colors2.push('purple');
+		//	alert(colors2);
+			var number3= [1,2,3,4];
+		//	alert(number3);
+		//	alert(number3[0]+number3[2]);
+			var array2 = [10,4,3,12,'hello'];
+		//	alert (number1.length);
+		//	alert(number2.length);
+		//	alert(array2);
+		//	alert(array2.length);// nombre d'éléments d'1 array
+		//	alert(array2.sort());// ordonner les éléments d'1 array
+		//	alert(array2.reverse());// ordonner les éléments d'1 array
+			
+		//loops
+			
+			// for loops
+			
+			for(var i=0; i<=10; i++){
+		//	console.log('Hello');
+		//	console.log(i); 
+			}
+			
+			
+			 //while loop
+			var j=0;
+			while(j<10){
+		//		console.log(j)
+				j++;
+			}
+												
+			// for each loop , to work with arrray 
+			
+			var number4 = [ 21,43,32,64,87];
+			number4.forEach(function(number4){
+				//console.log(number4);
+			});
+			
+			number4.reverse(); // to reverse arrray element order
+			// for loop to work with array
+			
+			for(var k = 0; k<=number4.length; k++){
+		//		console.log( number4[k]);
+			}
+			
+			// conditionnals
+										
+			chiffre1= 3	
+			chiffre2= 5
+			chiffre3= 6			
+			if (chiffre1 != chiffre2 && chiffre1 >= chiffre2){
+		//	console.log('true1');
+			} else {
+		//	console.log('false1');
+			}
+ 
+			if (chiffre1 != chiffre2 || chiffre1 >= chiffre2){
+		//	console.log('true2');
+			} else {
+		//	console.log('false2');
+			}
+			
+						
+			let fruit = 'apple';
+			switch(fruit){
+			
+				case "banana":
+		//			alert('I hate bananas');
+					break;
+				case "apple":
+		//			alert( 'I love apple');
+					break;
+				case "orange":
+		//			alert('oranges are OK');
+					break;
+				default: 
+		//			alert('I love all other fruits');
+					break;
+			};
+			
+			// objects litteral
+						
+			var papa= { 
+					firstName:'Daniel',
+					lastName:'OUATTARA.',
+					age:36,
+					family:['Julie', 'Gaia'],
+					address:{
+						street:'rue Sommeville',
+						numero:110,
+						ZIP:77340,
+						city:'CombsLaVille'
+					},
+					fullName: function(){
+						return this.firstName +" "+ this.lastName;
+					}
+				};
+							
+		//	console.log(papa.age);
+		//	console.log(papa.fullName());
+			
+			
+			// object constructor
+			
+			var apple = new Object();
+			apple.color = 'red'
+			apple.shape = 'round'
+			apple.describe = function(){
+				return 'An apple is the color '+ this.color+ ' and is the shape ' + this.shape;
+			
+			}
+			
+		//	console.log(apple.describe());
+			
+			// object constructor type pattern
+			
+			function Fruit(name, color, shape){
+				this.name = name;
+				this.color = color;
+				this.shape = shape; 
+				
+				this.describe = function(){
+				return 'A ' + this.name+ ' is the color ' + this.color + 
+						' and is the shape ' + this.shape;
+				}
+			}
+			
+			
+			var apple = new Fruit ('apple' , 'red' , 'round');
+			var melon = new Fruit ('melon' , 'green ' , 'round');
+			//console.log(apple);
+			//console.log(melon);
+			
+		//	console.log (melon.describe());
+			
+			 // arrays of object
+			 
+			 var users = [
+				{
+					name: 'John Doe',
+					age: 32
+				
+				},
+				
+				{
+					name: 'John1 Doe',
+					age: 33
+				
+				},
+				{
+					name: 'John3 Doe',
+					age: 33 
+				
+				} 
+			 ];  
+			 
+		//	 console.log(users[0].name);
+			 
+			 
+			 
+			 // Events
+			 			 
+			   function doClick(){
+					alert('You Clicked !');	  
+			   }
+			   
+			   function changeText(id){
+			   
+			   id.innerHTML = 'You Clicked! ';
+			   }
+	</script>
+
+
+</body>
+
+
+</html>	
